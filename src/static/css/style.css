@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+
+:root {
+  --secondary-color: #ef3737;
+  --terciary-color: #252525;
+  --line-color: #3a3a3a;
+
+  font-family: 'Questrial', sans-serif;
+}
+
+header {
+  display: flex;
+
+  h1 {
+    padding-block: 30px;
+    padding-inline: 100px;
+    border: 1px solid black;
+  }
+}
+
+footer {
+  background-color: var(--terciary-color);
+  color: white;
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 100px;
+    padding-block: 60px;
+    border-bottom: var(--line-color) 1px solid;
+
+    article {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 60px;
+        margin-right: 10px;
+      }
+
+      div h3 {
+        margin-bottom: 0px;
+      }
+
+      div p {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .footer-middle {
+    display: flex;
+    width: 1300px;
+    margin: auto;
+    margin-block: 100px;
+
+    div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+
+      span {
+        font-weight: bold;
+        span {
+          font-size: 2.5em;
+        }
+      }
+
+      img {
+        height: 40;
+        width: 35px;
+      }
+    }
+
+    .newsletter {
+      margin: auto;
+
+      form {
+        padding: 10px;
+        border-radius: 5px;
+        border: var(--line-color) 1px solid;
+        input {
+          background-color: var(--terciary-color);
+          border: none;
+        }
+        input::placeholder {
+          color: white;
+        }
+        button {
+          background-color: var(--secondary-color);
+          width: 100px;
+          height: 35px;
+          border: none;
+          border-radius: 5px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 100px;
+    border-top: var(--line-color) 1px solid;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        padding-inline: 10px;
+
+        i {
+          color: white;
+        }
+
+        img {
+          width: 40px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}
