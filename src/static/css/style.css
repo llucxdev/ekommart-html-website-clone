@@ -17,6 +17,8 @@ https://fixarium.co/
 
 body {
   margin: 0;
+  font-family: 'Gilroy', 'HelveticaNeue-Light', 'Helvetica Neue Light',
+    'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
 
 header {
@@ -129,6 +131,154 @@ main {
     }
   }
 
+  .offers {
+    display: flex;
+    justify-content: center;
+
+    .offer1 {
+      width: 660px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: start;
+      padding: 82px 100px;
+      background-image: url(http://fixarium.co/wp-content/uploads/2020/02/banner1-h1.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+
+      div {
+        color: black;
+        background-color: #f7c162;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        color: white;
+        font-size: 50px;
+      }
+      p {
+        margin-bottom: 25px;
+        color: white;
+      }
+
+      a {
+        color: black;
+        font-size: 14px;
+        background-color: white;
+        padding: 10px 30px 10px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+
+    .offer2 {
+      width: 360px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: start;
+      padding: 45px 50px;
+      background-image: url(http://fixarium.co/wp-content/uploads/2020/02/banner2-h1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      div {
+        color: white;
+        background-color: #ff5740;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: white;
+        font-size: 36px;
+      }
+      a {
+        color: black;
+        font-size: 14px;
+        background-color: white;
+        padding: 10px 30px 10px 30px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .products {
+    padding-block: 80px;
+    h2 {
+      text-align: center;
+      font-size: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--text-gray-color);
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      object-fit: cover;
+      width: 320px;
+      height: 320px;
+    }
+
+    button {
+      display: block;
+      margin: auto;
+      background-color: var(--terciary-color);
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px 10px 20px;
+      margin-top: 25px;
+      cursor: pointer;
+    }
+
+    .grid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      padding: 0px;
+
+      li {
+        border: var(--line-gray-color) 1px solid;
+        padding: 25px;
+
+        .type {
+          color: var(--text-gray-color);
+          font-weight: normal;
+        }
+
+        p {
+          color: var(--secondary-color);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
   .comments {
     display: flex;
     flex-direction: column;
@@ -153,7 +303,7 @@ main {
       }
     }
   }
-
+  /* bug imagenes */
   .brands {
     display: flex;
     justify-content: space-between;
@@ -182,7 +332,7 @@ footer {
   i {
     color: var(--secondary-color);
   }
-
+  /* centrar secciones footer */
   .footer-top {
     display: flex;
     justify-content: space-between;
