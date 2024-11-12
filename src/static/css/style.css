@@ -17,6 +17,9 @@ https://fixarium.co/
 
 body {
   margin: 0;
+  width: 1920px;
+  margin: auto;
+  border: 1px solid black;
   font-family: 'Gilroy', 'HelveticaNeue-Light', 'Helvetica Neue Light',
     'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
@@ -337,12 +340,14 @@ main {
     }
 
     .grid {
+      width: 1300px;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
 
       article:first-child {
-        height: 600px;
+        height: 700px;
         grid-column: 1;
         grid-row: 1 / span 2;
         background-image: url('../images/bestseller-1.jpg');
@@ -387,6 +392,13 @@ main {
           color: white;
           font-weight: bold;
 
+          div {
+            background-color: var(--secondary-color);
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: fit-content;
+          }
+
           h3 {
             font-size: 34px;
           }
@@ -398,6 +410,14 @@ main {
 
           span {
             color: white;
+          }
+
+          a {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
           }
         }
       }
@@ -419,17 +439,33 @@ main {
           color: white;
           font-weight: bold;
 
+          div {
+            background-color: #f9dc42;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            width: fit-content;
+          }
+
           h3 {
             font-size: 34px;
           }
 
           p {
-            color: #fee23c;
+            color: #f9dc42;
             font-size: 24px;
           }
 
           span {
             color: white;
+          }
+
+          a {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
           }
         }
       }
@@ -438,6 +474,7 @@ main {
 
   .latest-news {
     padding-top: 80px;
+    margin-bottom: 80px;
     h2 {
       text-align: center;
       font-size: 50px;
@@ -464,6 +501,21 @@ main {
       justify-content: center;
       align-items: center;
       gap: 20px;
+
+      article {
+        height: 500px;
+      }
+
+      article:hover {
+        p:nth-child(3) {
+          width: 100%;
+          padding-block: 15px;
+          background-color: var(--secondary-color);
+          color: white;
+          width: 340px;
+          text-align: center;
+        }
+      }
 
       div {
         position: relative;
@@ -529,21 +581,25 @@ main {
 
   .brands {
     display: flex;
-    justify-content: space-between;
-    padding: 0px 50px;
+    justify-content: center;
     border-top: var(--line-gray-color) 1px solid;
+    div {
+      width: 1200px;
+      display: flex;
+    }
     img {
-      margin: 0 auto;
+      margin: auto;
       padding-block: 55px;
     }
   }
-  /* bug imagenes */
+
   .bot-images {
     display: flex;
     img {
       object-fit: cover;
-      width: 320px;
-      height: 320px;
+
+      max-width: 320px;
+      aspect-ratio: 1/1;
     }
   }
 }
@@ -556,38 +612,41 @@ footer {
     color: var(--secondary-color);
   }
 
-  /* centrar secciones footer */
   .footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-inline: 100px;
     padding-block: 60px;
     border-bottom: var(--line-color) 1px solid;
 
-    article {
+    div:first-child {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      margin: auto;
+      width: 1300px;
 
-      i {
-        font-size: 30px;
-        margin-right: 20px;
-
-        border-radius: 50%;
-        padding: 15px;
+      article {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        border: var(--secondary-color) 2px solid;
-      }
 
-      div h3 {
-        margin-bottom: 0px;
-      }
+        i {
+          font-size: 30px;
+          margin-right: 20px;
 
-      div p {
-        margin-top: 10px;
+          border-radius: 50%;
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: var(--secondary-color) 2px solid;
+        }
+
+        div h3 {
+          margin-bottom: 0px;
+        }
+
+        div p {
+          margin-top: 10px;
+        }
       }
     }
   }
@@ -666,8 +725,13 @@ footer {
     }
   }
 
-  /* centrar */
   .footer-bottom {
+    div:first-child {
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      width: 1300px;
+    }
     height: 130px;
     display: flex;
     justify-content: space-between;
