@@ -16,6 +16,10 @@ https://fixarium.co/
   font-family: Questrial, sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   width: 1920px;
   margin: auto;
@@ -95,18 +99,23 @@ header {
     flex-direction: row;
     align-items: baseline;
 
-    div {
+    section {
       margin-inline: 20px;
       padding-inline: 10px;
+      padding-right: 50px;
       border-right: var(--line-gray-color) 1px solid;
+    }
 
-      &:last-child {
-        border-right: none;
-      }
+    section:last-child {
+      border-right: none;
 
-      i {
-        margin-right: 10px;
+      span {
+        font-size: 18px;
       }
+    }
+
+    section i {
+      margin-right: 10px;
     }
   }
 
@@ -189,6 +198,7 @@ main {
   .offers {
     display: flex;
     justify-content: center;
+    background-image: url('../images/background.png');
 
     .offer1 {
       width: 660px;
@@ -349,7 +359,7 @@ main {
     }
 
     .grid {
-      width: 1300px;
+      width: 80%;
       margin: auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -398,6 +408,7 @@ main {
           margin-left: 20px;
           color: white;
           font-weight: bold;
+          padding-right: 40px;
 
           div {
             background-color: var(--secondary-color);
@@ -630,7 +641,7 @@ footer {
     padding-block: 60px;
     border-bottom: var(--line-color) 1px solid;
 
-    div:first-child {
+    & > div {
       display: flex;
       justify-content: space-between;
       margin: auto;
@@ -721,6 +732,7 @@ footer {
         padding: 10px;
         border-radius: 5px;
         border: var(--line-color) 1px solid;
+        display: flex;
 
         input {
           background-color: var(--terciary-color);
@@ -733,8 +745,7 @@ footer {
 
         button {
           background-color: var(--secondary-color);
-          width: 100px;
-          height: 35px;
+          padding: 10px;
           border: none;
           border-radius: 5px;
           color: white;
@@ -744,7 +755,7 @@ footer {
   }
 
   .footer-bottom {
-    div:first-child {
+    div {
       display: flex;
       justify-content: space-between;
       margin: auto;

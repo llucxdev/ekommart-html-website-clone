@@ -4,20 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>24-ekomart.jpg</title>
-    <link rel="stylesheet" href="./static/css/style.min.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
   </head>
   <body>
     <header>
-      <div class="logo">
+      <section class="logo">
         <h1>ekommart</h1>
-      </div>
-      <div class="searchbar-nav">
+      </section>
+
+      <section class="searchbar-nav">
         <form action="">
           <i class="bi bi-search"></i>
-          <input
-            type="text"
-            placeholder="Search among 100,000 products..."
-          /><button>Search</button>
+          <input type="text" placeholder="Search among 100,000 products..." />
+          <button type="submit">Search</button>
         </form>
         <nav>
           <ul>
@@ -30,28 +29,30 @@
             <li><a href="">Contact</a></li>
           </ul>
         </nav>
-      </div>
-      <div class="info-and-icons">
-        <div>
+      </section>
+
+      <aside class="info-and-icons">
+        <section class="contact-info">
+          <h2 class="hidden">contact phone</h2>
           <p><strong>+048 800 456 789</strong></p>
           <p>Call us Free</p>
-        </div>
-        <div>
+        </section>
+        <section class="shipping-info">
           <p><strong>FREE SHIPPING</strong></p>
           <p>on orders over $150.00</p>
-        </div>
-        <div>
-          <p>
-            <i class="bi bi-person-circle"></i>
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-basket2"></i>
-            <span>$00.0</span>
-          </p>
-        </div>
-      </div>
+        </section>
+        <section class="user-icons">
+          <i class="bi bi-person-circle"></i>
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-basket2"></i>
+          <span>$00.0</span>
+        </section>
+      </aside>
     </header>
+
     <main>
       <section class="main-banner">
+        <h2 class="hidden">Main product</h2>
         <article>
           <p>NIKE - NEW ARRIVALS</p>
           <h2>THE AIR <br />JORDAN 1 MID</h2>
@@ -60,6 +61,7 @@
         </article>
       </section>
       <section class="offers">
+        <h2 class="hidden">Offers</h2>
         <article class="offer1">
           <div>40% OFF</div>
           <h3>STYLE MEETS <br />SUBSTANCE</h3>
@@ -169,6 +171,7 @@
         </ul>
       </section>
       <section class="best-sellers">
+        <h2 class="hidden">BEST SELLERS</h2>
         <div class="grid">
           <article>
             <div>
@@ -225,6 +228,7 @@
         </div>
       </section>
       <section class="comments">
+        <h2 class="hidden">comments</h2>
         <i class="bi bi-chat-quote-fill"></i>
         <cite>
           <p>
@@ -236,6 +240,7 @@
         </cite>
       </section>
       <section class="brands">
+        <h2 class="hidden">brands</h2>
         <div>
           <img src="./static/images/brand-1.png" alt="chavy" />
           <img src="./static/images/brand-2.png" alt="power house" />
@@ -245,6 +250,7 @@
         </div>
       </section>
       <section class="bot-images">
+        <h2 class="hidden">gallery</h2>
         <img src="./static/images/footer-image-1.jpg" alt="" />
         <img src="./static/images/footer-image-2.jpg" alt="" />
         <img src="./static/images/footer-image-3.jpg" alt="" />
@@ -255,6 +261,7 @@
     </main>
     <footer>
       <section class="footer-top">
+        <h2 class="hidden">footer-top</h2>
         <div>
           <article>
             <i class="bi bi-truck"></i>
@@ -280,6 +287,7 @@
         </div>
       </section>
       <section class="footer-middle">
+        <h2 class="hidden">footer-middle</h2>
         <div>
           <section>
             <h3>CONTACT US</h3>
@@ -292,10 +300,12 @@
             <p>Box 565, Charlestown, Nevis, West Indies, Caribbean</p>
           </section>
           <section>
+            <h3 class="hidden">PHONE</h3>
             <i class="bi bi-telephone-outbound-fill"></i>
             <span>+048 <span>123 456 7890</span></span>
           </section>
           <section>
+            <h3 class="hidden">WORKING HOURS</h3>
             <p>Monday - Friday: <span>8am - 4pm</span></p>
             <p>Saturday: <span>9am - 5pm</span></p>
           </section>
@@ -320,6 +330,7 @@
         </section>
       </section>
       <section class="footer-bottom">
+        <h2 class="hidden">footer-bottom</h2>
         <div>
           <p>Copyright &copy; 2020 ekomart. All Rights Reserved</p>
           <ul>
