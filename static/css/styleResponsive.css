@@ -251,6 +251,11 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media screen and (width<=1200px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .offer1 {
       width: 660px;
       display: flex;
@@ -428,6 +433,12 @@ main {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
 
+      @media screen and (width<=1200px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       article:first-child {
         height: 700px;
         grid-column: 1;
@@ -441,6 +452,11 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media screen and (width<=1200px) {
+          height: 300px;
+          width: 100%;
+        }
 
         span {
           display: flex;
@@ -477,6 +493,11 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: end;
+
+        @media screen and (width<=1200px) {
+          height: 300px;
+          width: 100%;
+        }
 
         .container {
           margin-left: 20px;
@@ -524,6 +545,11 @@ main {
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
+
+        @media screen and (width<=1200px) {
+          height: 300px;
+          width: 100%;
+        }
 
         .container {
           margin-left: 20px;
@@ -591,13 +617,10 @@ main {
     .wrap {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       gap: 20px;
-
-      @media screen and (width<=1300px) {
-        flex-direction: column;
-      }
 
       article {
         height: 500px;
