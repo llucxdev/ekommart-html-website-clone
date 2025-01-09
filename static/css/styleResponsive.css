@@ -337,7 +337,7 @@ main {
     }
 
     .offer1 {
-      width: 660px;
+      width: 40%;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
@@ -348,8 +348,13 @@ main {
       background-repeat: no-repeat;
       background-position: right;
 
-      @media screen and (width<=1200px) {
-        width: 60%;
+      @media screen and (width<=1360px) {
+        width: 50%;
+      }
+
+      @media (width <= 850px) {
+        width: 100%;
+        padding: 0;
       }
 
       div {
@@ -384,7 +389,7 @@ main {
     }
 
     .offer2 {
-      width: 360px;
+      width: 25%;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
@@ -394,8 +399,12 @@ main {
       background-repeat: no-repeat;
       background-size: cover;
 
-      @media screen and (width<=1200px) {
-        width: 40%;
+      @media screen and (width<=1360px) {
+        width: 30%;
+      }
+
+      @media (width <= 850px) {
+        width: 70%;
       }
 
       div {
