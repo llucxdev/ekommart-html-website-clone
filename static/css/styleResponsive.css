@@ -867,16 +867,21 @@ footer {
       justify-content: space-between;
       margin: auto;
       width: 75%;
+      flex-wrap: wrap;
 
-      @media screen and (width<=1024px) {
+      @media screen and (width<=1300px) {
+        justify-content: center;
+      }
+
+      @media screen and (width<=850) {
         flex-direction: column;
         width: 300px;
       }
 
       article {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        min-width: 320px;
 
         @media screen and (width<=1024px) {
           justify-content: start;
