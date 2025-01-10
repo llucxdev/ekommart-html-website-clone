@@ -22,7 +22,8 @@ https://fixarium.co/
 
 body {
   margin: auto;
-  border: 1px solid black;
+
+  /* border: 1px solid black; */
   font-family: Gilroy, HelveticaNeue-Light, 'Helvetica Neue Light',
     'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 }
@@ -31,34 +32,34 @@ header {
   display: grid;
   grid-template-columns: 1fr 2fr 3fr;
   grid-template-areas: 'logo searchbar-nav info-and-icons';
+  max-width: 100%;
+  padding: 10px;
 
-  @media (width <= 1450px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content min-content;
+  @media (width<=600px) {
+    grid-template-columns: 1fr; /* Solo 1 columna */
+    grid-template-rows: auto auto auto; /* 3 filas */
     grid-template-areas:
       'logo'
       'info-and-icons'
       'searchbar-nav';
+    gap: 10px;
+    padding: 5px;
   }
 
   .logo {
     grid-area: logo;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-right: var(--line-gray-color) 1px solid;
-    padding-inline: 20px;
-
-    @media (width <= 1450px) {
-      border-right: none;
-      border-bottom: var(--line-gray-color) 1px solid;
-      padding: 0;
-    }
+    justify-content: center; /* Centra el logo */
+    padding: 0 10px;
 
     h1 {
-      font-size: 3em;
-      color: black;
+      font-size: 2.5em;
       font-weight: bold;
+
+      @media (width<=600px) {
+        font-size: 2em; /* Reduce el tamaño en pantallas pequeñas */
+      }
     }
   }
 
@@ -66,22 +67,23 @@ header {
     grid-area: searchbar-nav;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    margin-left: 50px;
-
-    @media (width <= 1450px) {
-      margin: 0 auto;
-      width: 80%;
-    }
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 
     form {
       display: flex;
       border: var(--line-gray-color) 1px solid;
       padding: 10px;
+      width: 100%; /* Ocupa todo el ancho disponible */
+
+      @media (width<=600px) {
+        width: 90%;
+      }
 
       i {
         color: var(--secondary-color);
-        margin-right: 10px;
+        margin-right: 5px;
       }
 
       input {
@@ -94,23 +96,31 @@ header {
         color: white;
         background-color: var(--secondary-color);
         border-radius: 5px;
-        margin-left: auto;
+      }
+
+      :focus {
+        outline: none;
       }
     }
 
     nav {
       ul {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-left: 0;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         list-style: none;
+        padding: 0;
 
         li {
+          margin: 5px;
+
           a {
             text-decoration: none;
             color: black;
-            text-wrap: nowrap;
+
+            @media (width<=600px) {
+              font-size: 14px; /* Reduce el tamaño de fuente */
+            }
           }
         }
       }
@@ -119,51 +129,52 @@ header {
 
   .info-and-icons {
     grid-area: info-and-icons;
-    margin-top: 20px;
     display: flex;
-    align-items: baseline;
-    text-wrap: nowrap;
-    justify-self: end;
+    flex-direction: row; /* Mantiene disposición horizontal */
+    align-items: center;
+    justify-content: center; /* Centra los íconos */
     gap: 20px;
+    padding: 10px;
 
-    @media screen and (width <= 1450px) {
-      justify-self: center;
-      margin-bottom: 15px;
+    @media (width<=600px) {
+      gap: 10px; /* Reduce el espacio entre elementos */
+      padding: 5px; /* Reduce el padding */
     }
 
     section {
       border-right: var(--line-gray-color) 1px solid;
-      padding-right: 20px;
+      padding-right: 10px;
 
       h2 {
         font-size: 16px;
+
+        @media (width<=600px) {
+          font-size: 14px; /* Reduce el tamaño de la fuente */
+        }
       }
     }
 
     .user-icons {
       border-right: none;
-      margin-top: 15px;
       display: flex;
-      justify-content: start;
       align-items: center;
-      padding: 0;
-      margin-left: 0;
-      text-wrap: wrap;
-      margin-right: 25px;
+      gap: 10px;
 
       span {
         font-size: 18px;
+
+        @media (width<=600px) {
+          font-size: 14px; /* Reduce el tamaño de la fuente */
+        }
       }
     }
 
     section i {
-      margin-right: 10px;
-    }
+      margin-right: 5px;
 
-    @media (width <= 1450px) {
-      flex-direction: row;
-      justify-content: center;
-      gap: 10px;
+      @media (width<=600px) {
+        margin-right: 3px;
+      }
     }
   }
 }
@@ -709,6 +720,12 @@ main {
       width: 410px;
       height: 460px;
       object-fit: cover;
+    }
+
+    @media (width<=768px) {
+      img {
+        width: 350px;
+      }
     }
 
     .wrap {
