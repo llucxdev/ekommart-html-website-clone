@@ -377,6 +377,11 @@ main {
       @media (width <= 850px) {
         width: 100%;
         padding: 0;
+        padding-block: 15px;
+
+        * {
+          margin-left: 10px;
+        }
       }
 
       div {
@@ -425,8 +430,8 @@ main {
         width: 30%;
       }
 
-      @media (width <= 850px) {
-        width: 70%;
+      @media (width <= 375px) {
+        width: 50vw;
       }
 
       div {
@@ -596,6 +601,10 @@ main {
           font-size: 80px;
           text-align: center;
           margin: 0;
+
+          @media (width <= 410px) {
+            font-size: 50px;
+          }
         }
 
         p {
@@ -622,6 +631,7 @@ main {
         @media screen and (width<=1200px) {
           height: 300px;
           width: 100%;
+          padding-block: 15px;
         }
 
         .container {
@@ -674,6 +684,7 @@ main {
         @media screen and (width<=1200px) {
           height: 300px;
           width: 100%;
+          padding-block: 15px;
         }
 
         .container {
@@ -733,17 +744,8 @@ main {
       color: var(--text-gray-color);
     }
 
-    img {
-      width: 410px;
-      height: 460px;
-      object-fit: cover;
-
-      @media (width<=420px) {
-        width: 90vw;
-      }
-    }
-
     .wrap {
+      width: 100%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -753,6 +755,10 @@ main {
 
       article {
         height: 500px;
+
+        @media (width<=450px) {
+          width: 100%;
+        }
       }
 
       article:hover {
@@ -762,6 +768,20 @@ main {
           color: white;
           width: 340px;
           text-align: center;
+
+          @media (width<=450px) {
+            width: 100%;
+          }
+        }
+      }
+
+      img {
+        width: 410px;
+        height: 460px;
+        object-fit: cover;
+
+        @media (width<=450px) {
+          width: 100%;
         }
       }
 
@@ -776,6 +796,10 @@ main {
         width: 340px;
         height: 165px;
         background-color: white;
+
+        @media (width<=450px) {
+          width: 100%;
+        }
 
         p:nth-child(1) {
           margin-bottom: 10px;
@@ -796,6 +820,10 @@ main {
           color: white;
           width: 340px;
           text-align: center;
+
+          @media (width<=450px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -1095,6 +1123,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
       }
     }
 
