@@ -24,8 +24,8 @@ body {
   margin: auto;
 
   /* border: 1px solid black; */
-  font-family: Gilroy, HelveticaNeue-Light, 'Helvetica Neue Light',
-    'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-family: Gilroy, HelveticaNeue-Light, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande',
+    sans-serif;
 }
 
 header {
@@ -567,7 +567,7 @@ main {
         height: 700px;
         grid-column: 1;
         grid-row: 1 / span 2;
-        background-image: url('../images/bestseller-1.jpg');
+        background-image: url('../images/bestseller-1.webp');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
@@ -882,6 +882,7 @@ main {
     display: flex;
     width: 100%;
     overflow: hidden;
+    background-color: #f64646;
 
     img {
       object-fit: cover;
@@ -891,28 +892,28 @@ main {
   }
 
   /* Mostrar 5 imágenes */
-  @media screen and (width<=1600px) {
+  @media screen and (width<=1800px) {
     .bot-images img:first-of-type {
       display: none;
     }
   }
 
   /* Mostrar 4 imágenes */
-  @media screen and (width<=1280px) {
+  @media screen and (width<=1500px) {
     .bot-images img:nth-of-type(2) {
       display: none;
     }
   }
 
   /* Mostrar 3 imágenes */
-  @media screen and (width<=960px) {
+  @media screen and (width<=1200px) {
     .bot-images img:nth-of-type(3) {
       display: none;
     }
   }
 
   /* Mostrar 2 imágenes */
-  @media screen and (width<=640px) {
+  @media screen and (width<=900px) {
     .bot-images img:nth-of-type(4) {
       display: none;
     }
@@ -1093,6 +1094,7 @@ footer {
       }
 
       @media screen and (width<=1280px) {
+        width: 100%;
         border: none;
         padding: 0;
         margin: 0;
@@ -1100,7 +1102,9 @@ footer {
         justify-self: start;
 
         input {
-          width: 100%;
+          width: 95%;
+          padding: 5px;
+          margin-bottom: 5px;
         }
       }
     }
